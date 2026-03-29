@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Support – Dev Store</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+    body {
+        margin: 0;
+        font-family: "Inter", sans-serif;
+        background: #0d0f16;
+        color: #fff;
+    }
+
+    header {
+        text-align: center;
+        padding: 3rem 1rem;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    header p {
+        color: #b5b5b5;
+    }
+
+    nav {
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    nav a {
+        color: #4ade80;
+        margin: 0 10px;
+        text-decoration: none;
+        font-size: 1rem;
+    }
+
+    .container {
+        max-width: 700px;
+        margin: auto;
+        padding: 2rem 1rem;
+        background: #141821;
+        border-radius: 12px;
+        border: 1px solid #1f2330;
+    }
+
+    input, textarea {
+        width: 100%;
+        padding: 0.8rem;
+        margin-top: 0.5rem;
+        border-radius: 8px;
+        border: none;
+        background: #11141c;
+        color: #fff;
+        border: 1px solid #1f2330;
+    }
+
+    button {
+        margin-top: 1rem;
+        padding: 0.8rem 1rem;
+        background: #4ade80;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1rem;
+        color: #000;
+    }
+
+    footer {
+        margin-top: 3rem;
+        padding: 2rem 1rem;
+        text-align: center;
+        color: #777;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Support</h1>
+    <p>Ouvre un ticket si tu as un problème ou une question</p>
+
+    <nav>
+        <a href="index.html">Accueil</a>
+        <a href="contact.html">Contact</a>
+        <a href="ticket.html">Support</a>
+    </nav>
+</header>
+
+<div class="container">
+
+    <h2>🎫 Ouvrir un ticket</h2>
+
+    <form id="ticketForm">
+        <label>Pseudo Discord</label>
+        <input type="text" id="pseudo" required>
+
+        <label>Produit concerné</label>
+        <input type="text" id="produit" required>
+
+        <label>Description du problème</label>
+        <textarea id="message" rows="5" required></textarea>
+
+        <button type="submit">Envoyer le ticket</button>
+    </form>
+
+    <p id="status" style="margin-top:1rem;color:#4ade80;"></p>
+
+</div>
+
+<footer>
+    Dev Store – Scripts PC & OSINT
+</footer>
+
+<script>
+document.getElementById("ticketForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const pseudo = document.getElementById("pseudo").value;
+    const produit = document.getElementById("produit").value;
+    const message = document.getElementById("message").value;
+
+    // Remplace TON_ID_DISCORD par ton ID Discord
+    const discordURL =
+        "https://discord.com/users/1048922559841837136/message?text=" +
+        encodeURIComponent(
+            "🎫 **Nouveau ticket support**\n" +
+            "👤 Pseudo : " + pseudo + "\n" +
+            "📦 Produit : " + produit + "\n" +
+            "📝 Message : " + message
+        );
+
+    window.location.href = discordURL;
+
+    document.getElementById("status").innerText =
+        "Ticket prêt à être envoyé dans Discord.";
+});
+</script>
+
+</body>
+</html>
