@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact – Dev Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #050712;
+            --bg-alt: #0d101c;
+            --card: #141827;
+            --border: #22283a;
+            --accent: #4ade80;
+            --primary: #6366f1;
+            --text-main: #ffffff;
+            --text-muted: #b5b5c5;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Inter", sans-serif;
+            background: radial-gradient(circle at top, #1a1f35 0, #050712 55%);
+            color: var(--text-main);
+        }
+
+        /* NAVBAR */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            backdrop-filter: blur(10px);
+            background: rgba(5, 7, 18, 0.85);
+            border-bottom: 1px solid rgba(34, 40, 58, 0.7);
+        }
+
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0.8rem 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            font-size: 1rem;
+            text-transform: uppercase;
+            color: var(--accent);
+        }
+
+        .nav-links a {
+            margin-left: 1.2rem;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #fff;
+        }
+
+        /* HEADER / HERO LIGHT */
+        .hero {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3.5rem 1.2rem 2rem;
+            text-align: left;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 1.2rem 2.5rem;
+        }
+
+        .card {
+            background: var(--card);
+            border-radius: 14px;
+            border: 1px solid var(--border);
+            padding: 1.4rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .card h2 {
+            margin-top: 0;
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+        }
+
+        .info-line {
+            margin-bottom: 0.6rem;
+        }
+
+        code {
+            background: #1f2433;
+            padding: 4px 6px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            margin-top: 3rem;
+            padding: 2rem 1.2rem;
+            background: #050712;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="nav-inner">
+            <div class="logo">DEV STORE</div>
+            <div class="nav-links">
+                <a href="index.html#home">Accueil</a>
+                <a href="index.html#scripts">Scripts</a>
+                <a href="index.html#premium">Premium</a>
+                <a href="contact.html">Contact</a>
+                <a href="ticket.html">Support</a>
+                <a href="index.html#crypto">Crypto</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Contact</h1>
+        <p>Besoin d’aide, d’infos ou d’un support après achat.</p>
+    </section>
+
+    <!-- CONTENU -->
+    <div class="container">
+
+        <div class="card">
+            <h2>📩 Me contacter</h2>
+
+            <div class="info-line">
+                <strong>Discord :</strong><br>
+                <code>hydra.on.top</code>
+            </div>
+
+            <div class="info-line">
+                <strong>Backup Discord :</strong><br>
+                <code>michtoken</code>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>📧 Email</h2>
+            <div class="info-line">
+                <strong>Adresse :</strong><br>
+                <code>dev.store.contact.lfotkrc@gmail.com</code>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        Dev Store – Scripts PC & OSINT
+    </footer>
+
+</body>
+</html>
